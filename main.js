@@ -1,4 +1,15 @@
-fetch('http://api.openweathermap.org/data/2.5/weather?q=cordoba&units=metric&appid=4f31e259f539d016ea813c108c431829')
+const form = document.forms[0]
+const submit =form.elements[0]
+
+form.onsubmit = e => {
+    e.preventDefault()
+    buscarClimaPorCiudad(submit.value)
+
+}
+
+const buscarClimaPorCiudad = (ciudad) =>{
+
+fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=4f31e259f539d016ea813c108c431829`)
     .then(res => res.json())
     .then(info => {
         console.log(info)
@@ -20,23 +31,25 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q=cordoba&units=metric&app
 
         contenedor.innerHTML = `
             
+        <div id ="principal">
             <div id ="ciudadDesc">
-            <h1>${cityName} </h1>
-            <p>${description} </p>
+            <h2 id ="titulodeCiudad">${cityName} </h2>
+            <p id ="descriptionTotal">${description} </p>
             </div>
+            <div id="contenedorDetalles">
             <div id ="imageIcon">             
                   <img src="${img}">
-                  <h2>${temperatura}</h2>
+                  <h2>${temperatura}</h2><span>°C</span>
             </div>
-         
             <div id ="ciudadDetalles">
             <p> Lluvias:${precipitation}% </p>
             <p>Humedad:${humidity}% </p>
             <p> Vientos:${wind} m/s </p>
             </div>
-            `
+            </div>
+            </div>`
     })
-
+}
 
 
 

@@ -5,36 +5,74 @@ body {
        }
 
 
-#contenedor {
+#principal {
     width: 400px;;
     padding: 15px;
     margin: 15px;
-    display:flex;
     background-color: #fedcd2;
     color: #945d60;
     border:0.5px  solid #e9e9e9;
-    border-radius: 5%;
+    border-radius: 10px;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
       
 }
 
-#contenedor:hover {
+
+
+#principal:hover {
     background-color: #EAE3EA;         
 }
+#ciudadDesc {
+    margin-left:10px;
+}
 
-#ciudadDetalles {
-    margin-left:60px;
-                 
- }
+#titulodeCiudad {
+    margin:0px;
+}
+
+#descriptionTotal {
+    margin:0px;
+}
+
+  #contenedorDetalles {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }
 
  #imageIcon {
-   display:inline-flex;
-   margin-left:20px;
-       
+   display:flex;
+     
+         
      }
  #imageIcon img {
      height:50px;
  } 
+ 
+ span {
+     align-self: center;
+     font-weight: bold;
+     padding: 5px;
+     font-size: 16px;
+ }
+  form {
+      margin: 10px;
+      }
+
+      input {
+        border:1px  solid #e9e9e9;
+        height: 20px;
+        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+      }
+      #submit {
+          height: 25px;
+          font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+      }
+
+      #submit:hover {
+        background-color:  #fedcd2;      
+      }
 
 
 
