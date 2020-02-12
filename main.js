@@ -9,7 +9,7 @@ form.onsubmit = e => {
 
 const buscarClimaPorCiudad = (ciudad) =>{
 
-fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=4f31e259f539d016ea813c108c431829`)
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=4f31e259f539d016ea813c108c431829`)
     .then(res => res.json())
     .then(info => {
         console.log(info)
